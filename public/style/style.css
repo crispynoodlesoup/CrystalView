@@ -34,8 +34,6 @@ img {
 ul, ol {
     list-style: none;
     height: auto;
-    display: flex;
-    align-items: center;
 }
 
 a {
@@ -52,6 +50,8 @@ h1 {
 }
 
 nav ul {
+    display: flex;
+    align-items: center;
     display: flex;
     gap: 16px;
 }

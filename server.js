@@ -130,8 +130,9 @@ app.listen(process.env.PORT || 8080);
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.use(express.static("public"));    
-app.listen(8000, function() {
+app.use(express.static("public"));  
+  
+app.listen(3000, function() {
   console.log("Server is running on port 3000");
 });
 
