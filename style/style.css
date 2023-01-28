@@ -61,7 +61,7 @@ nav ul li {
     transition: all 0.1s;
 }
 
-nav ul li:hover {
+.link:hover {
     border-bottom: var(--accent) solid 4px;
 }
 
@@ -71,6 +71,22 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.nav-emphasis {
+    color: white;
+    padding: 6px 8px;
+    background-color: var(--accent);
+}
+
+.nav-emphasis:hover {
+    background-color: #31b8bd;
+}
+
+.nav-emphasis a {
+    color: white;
+    font-weight: 500;
+    border-bottom: none;
 }
 
 .logo-div {
