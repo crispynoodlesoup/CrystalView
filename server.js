@@ -5,6 +5,8 @@ const session = require("express-session");
 const { Configuration, PlaidApi, PlaidEnvironments } = require("plaid");
 const app = express();
 const moment = require("moment");
+const request = require("request");
+const https = require("https");
 
 const APP_PORT = process.env.APP_PORT || 3000;
 
@@ -110,12 +112,6 @@ app.get("/api/transactions", async (req, res, next) => {
 });
 
 app.listen(process.env.PORT || 8080);
-const express = require("express");
-const bodyParser = require("body-parser");
-const request = require("request");
-const https = require("https");
-
-const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
