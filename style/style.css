@@ -1,9 +1,9 @@
 :root {
-    --primary: #252525; /*464646*/
-    --secondary: #666666;
+    --primary: #fcfcfc; /*464646*/
+    --secondary: #a0a0a0;
     --accent: #1ca5aa;
-    --text-color: white;
-    --border-color: #161616;
+    --text-color: black;
+    --border-color: #4b4b4b;
 }
 
 * {
