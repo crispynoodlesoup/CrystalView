@@ -73,9 +73,22 @@ nav {
     align-items: center;
 }
 
+.logo-div {
+    max-height: 2rem;
+    display: flex;
+    gap: 8px;
+}
+
 .logo {
-    padding: 0 4px;
-    background-color: var(--accent);
+    color: black;
+}
+
+.logo-icon {
+    display: block;
+    max-width: 2rem;
+    max-height: 2rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 main {

@@ -22,7 +22,7 @@
 .img-wrap {
     flex: 1;
     position: relative;
-    max-width: clamp(160px, 20vw, 250px);
+    max-width: clamp(160px, 20vw, 200px);
 }
 
 .creator-img {
@@ -32,12 +32,17 @@
 }
 
 .creator-text {
-    max-width: clamp(160px, 20vw, 250px);
-    height: clamp(160px, 20vw, 250px);
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+
+    max-width: clamp(160px, 20vw, 200px);
+    width: 100%;
+    height: clamp(160px, 20vw, 200px);
+
     bottom: 0;
     position: absolute;
     padding: 8px;
-    background-color: rgba(0, 0, 0, 0.541);
+
     opacity: 0;
     transition: all 0.5s;
 }
