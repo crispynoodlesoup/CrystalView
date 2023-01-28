@@ -3,12 +3,26 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const { Configuration, PlaidApi, PlaidEnvironments } = require("plaid");
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 const app = express();
 const moment = require("moment");
 const request = require("request");
 const https = require("https");
 
+initializeApp();
+const db = getFirestore();
+
 const APP_PORT = process.env.APP_PORT || 3000;
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA5qcH5BiU50SDtw65TMz4GRWTaLugwE-g",
+  authDomain: "crystalview-e6229.firebaseapp.com",
+  projectId: "crystalview-e6229",
+  storageBucket: "crystalview-e6229.appspot.com",
+  messagingSenderId: "618671027510",
+  appId: "1:618671027510:web:918b488a44dc4888c2af97"
+};
 
 // Creates a session key, which we can use to store the user's access token
 // (Convenient for demo purposes, bad for a production-level app)
@@ -117,8 +131,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.use(express.static("public"));  
-
-app.listen(3000, function() {
+  
+app.listen(8000, function() {
   console.log("Server is running on port 3000");
 });
 
