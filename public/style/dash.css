@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 8px;
 }
 
@@ -21,6 +21,10 @@
     height: 24px;
 }
 
+.emph {
+    background-color: #40bcc062 ;
+}
+
 .sidebar-item:hover {
     background-color: lightgray;
 }
@@ -37,3 +41,39 @@
     justify-self: center;
 }
 
+.dash-content-wrap {
+    display: flex;
+    margin-top: 8px;
+}
+
+.weekly-report {
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 8px;
+}
+
+.goals {
+    margin: 0 auto;
+    width: 300px;
+    padding: 0 8px;
+}
+
+.expense-table {
+    width: 90%;
+}
+
+.inline {
+    display: inline;
+}
+
+.positive {
+    color: #1db60f;
+}
+
+.negative {
+    color: #c42d2d
+}
+
+.table-left {
+    text-align: left;
+}
