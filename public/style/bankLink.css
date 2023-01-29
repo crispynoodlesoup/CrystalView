@@ -25,3 +25,7 @@
     background-color: #31b8bd;
     cursor: pointer;
 }
+
+table {
+    width: 240px;
+}
