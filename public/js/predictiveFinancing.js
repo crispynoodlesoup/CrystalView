@@ -2,6 +2,10 @@ var myChart = echarts.init(document.getElementById('yes'));
 
 const dataCount = 365;
 const data = generateData(dataCount);
+const data2 = generateData(dataCount);
+const data3 = generateData(dataCount);
+const data4 = generateData(dataCount);
+const data5 = generateData(dataCount);
 var option = {
   title: {
     text: "A Prediction of Your Year of spending",
@@ -19,6 +23,7 @@ var option = {
     }
   ],
   xAxis: {
+    type: "category",
     data: data.categoryData,
     silent: false,
     splitLine: {
@@ -36,10 +41,39 @@ var option = {
   series: [
     {
       type: 'bar',
+      stack: "yes",
       data: data.valueData,
       // Set `large` for large data amount
       large: true
-    }
+    },
+    {
+        type: 'bar',
+        stack: "yes",
+        data: data2.valueData,
+        // Set `large` for large data amount
+        large: true
+      },
+      {
+          type: 'bar',
+          stack: "yes",
+          data: data3.valueData,
+          // Set `large` for large data amount
+          large: true
+        },
+        {
+            type: 'bar',
+            stack: "yes",
+            data: data4.valueData,
+            // Set `large` for large data amount
+            large: true
+          },
+          {
+              type: 'bar',
+              stack: "yes",
+              data: data5.valueData,
+              // Set `large` for large data amount
+              large: true
+            }
   ]
 };
 
