@@ -9,10 +9,10 @@
     <title>hackathon!</title>
     <link rel="icon" href="./assets/noun-crystal-ball-4022614.svg">
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/dash.css">
+    <link rel="stylesheet" href="./style/bankLink.css">
     <script src="./scripts/script.js" defer></script>
-    <script src="js/index.js"></script>
-    <script src="js/bankData.js"></script>
+    <script src="./js/echarts.js"></script>
 </head>
 
 <body>
@@ -20,18 +20,40 @@
         <div class="logo-div">
             <!--Crystal Ball by Visualeat from--> <a href="https://thenounproject.com/browse/icons/term/crystal-ball/" target="_blank" title="Crystal Ball Icons"><img class="logo-icon" src="./assets/noun-crystal-ball-4022614.png"></a>
             
-        <a href="./index.html"><h1 class="logo">PCBK</h1></a>
+        <a href="./index.html"><h1 class="logo">Crystal View</h1></a>
         </div>
         <ul>
             <li class="link"><a href="./index.html">Home</a></li>
-            <div class="nav-emphasis">
-            <li><a
-                href="#"
-                id="teller-connect"
-                >Sign In</a
-              >
-              <script src="https://cdn.teller.io/connect/connect.js"></script>
-              <script>
+    
+        </ul>
+    </nav>
+    <main>
+        <div class="dash-wrap">
+            <div class="sidebar">
+                <ul>
+                    <li class="sidebar-item"><a href="./userDash.html">Dashboard</a></li>
+                    <li class="sidebar-item"><a href="./financeRecords.html">Financial Records</a></li>
+                    <li class="sidebar-item"><a href="./predictiveFinance.html">Predictive Financing</a></li>
+                    <li class="sidebar-item emph"><a href="./bankLink.html">Bank Linking</a></li>
+                </ul>
+                <div class="sidebar-separator"></div>
+            </div>
+            <div class="dashboard">
+                <div class="wrapper">
+                    <table>
+                        <tr>
+                            <th>Banks</th>
+                        </tr>
+                        <tr>
+                            <td><p>Chase Bank</p></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>Want to link another bank? Crystal View allows it to be done simply using Teller!</p>
+                    <br>
+                    <button id="teller2" class="link-bank"><a href="">Link</a></button>
+                    <script src="https://cdn.teller.io/connect/connect.js"></script>
+                    <script>
                      // Part 2. Initialize & configure the client library
                     document.addEventListener("DOMContentLoaded", function() {
                         var tellerConnect = TellerConnect.setup({
@@ -43,7 +65,7 @@
                         onSuccess: function(enrollment) {
                             console.log("User enrolled successfully", enrollment.accessToken);
                             sessionStorage.setItem("clientToken", enrollment.accessToken);
-                            window.location.href='./userDash.html';
+                            window.location.href='./bankLink.html';
                         },
                         onExit: function() {
                             console.log("User closed Teller Connect");
@@ -51,60 +73,21 @@
                         });
 
                         // Part 4. Hook user actions to start Teller Connect
-                        var el = document.getElementById("teller-connect");
+                        var el = document.getElementById("teller2");
                         el.addEventListener("click", function() {
                         tellerConnect.open();
                         });
                     });
               </script>
-            </li>
+                </div>
+            </div>
         </div>
-        </ul>
-    </nav>
-    <main>
-        <!--<section class="main-text">
-        </section>-->
-        <section class="exhibit">
-            <div class="exhibit-text">
-                <h1>The Creators!</h1>
-                <div class="section-line"></div>
-            </div>
-            <div class="row-plus-gap">
-                <div class="img-wrap">
-                    <img class="creator-img" src="./assets/rafp.jpg" alt="peebar">
-                    <div class="creator-text">
-                        <h2>Rafael P.</h2>
-                        <p>Our Front End Dev</p>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <img class="creator-img" src="./assets/rahp1.jpg" alt="raph">
-                    <div class="creator-text">
-                        <h2>Raphael C.</h2>
-                        <p>Our Data Scientist</p>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <img class="creator-img" src="./assets/pey1.jpg" alt="peebar">
-                    <div class="creator-text">
-                        <h2>Peyton B.</h2>
-                        <p>Our API Expert</p>
-                    </div>
-                </div>
-                <div class="img-wrap">
-                    <img class="creator-img" src="./assets/sach.jpg" alt="al">
-                    <div class="creator-text">
-                        <h2>Sachin K.</h2>
-                        <p>Our Back End Developer</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
     <footer>
         <div class="footer-line"></div>
         <p><strong>Credit of Rafael Padilla, Raphael Cacho, Peyton Barre, and Sachin Kathiresan</strong></p>
     </footer>
+    <script src="./js/dash.js"></script>
 </body>
 
 </html>
