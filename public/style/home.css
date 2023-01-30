@@ -1,0 +1,52 @@
+.main-text {
+    text-align: center;
+    max-width: clamp(320px, 40vw, 540px);
+    margin: auto;
+}
+
+.row-plus-gap {
+    display: flex;
+    gap: 8px;
+}
+
+.exhibit {
+    margin: auto;
+    padding: 6px;
+}
+
+.exhibit-text {
+    text-align: center;
+    padding: 4px;
+}
+
+.img-wrap {
+    flex: 1;
+    position: relative;
+    max-width: clamp(160px, 20vw, 200px);
+}
+
+.creator-img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.creator-text {
+    background-color: rgba(0, 0, 0, 0.541);
+    color: white;
+
+    max-width: clamp(160px, 20vw, 200px);
+    width: 100%;
+    height: clamp(160px, 20vw, 200px);
+
+    bottom: 0;
+    position: absolute;
+    padding: 8px;
+
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.creator-text:hover {
+    opacity: 100%;
+}

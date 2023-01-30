@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hackathon!</title>
+    <link rel="icon" href="./assets/noun-crystal-ball-4022614.svg">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/dash.css">
+    <script src="./scripts/script.js" defer></script>
+    <script src="./js/echarts.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-div">
+            <!--Crystal Ball by Visualeat from--> <a href="https://thenounproject.com/browse/icons/term/crystal-ball/" target="_blank" title="Crystal Ball Icons"><img class="logo-icon" src="./assets/noun-crystal-ball-4022614.png"></a>
+            
+        <a href="./index.html"><h1 class="logo">Crystal View</h1></a>
+        </div>
+        <ul>
+            <li class="link"><a href="./index.html">Home</a></li>
+            <div class="nav-emphasis">
+            <li><a href="./">Sign In</a></li>
+        </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="dash-wrap">
+            <div class="sidebar">
+                <ul>
+                    <li class="sidebar-item emph"><a href="./userDash.html">Dashboard</a></li>
+                    <li class="sidebar-item"><a href="./financeRecords.html">Financial Records</a></li>
+                    <li class="sidebar-item"><a href="./predictiveFinance.html">Predictive Financing</a></li>
+                    <li class="sidebar-item"><a href="./bankLink.html">Bank Linking</a></li>
+                </ul>
+                <div class="sidebar-separator"></div>
+            </div>
+            <div class="dashboard">
+                <div class="dash-content-wrap">
+                    <div class="pie-chart" id="weekly-pie" style="width: 280px;height:360px;"></div>
+                    <div class="weekly-report card">
+                        <h3>Weekly Report</h3>
+                        <div class="section-line"></div>
+                        <div class="expenditure-log">
+                            <labal>Deviations from projected expenses:</label>
+                            <table class="expense-table">
+                                <tr>
+                                    <th class="table-left">
+                                        <p>Expenditure</p>
+                                    </th>
+                                    <th>
+                                        <p>Change</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="table-left">
+                                        <p class="inline">Food</p>
+                                    </td>
+                                    <td>
+                                        <p class="inline positive">+20.8%</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left">
+                                        <p class="inline">Entertainment</p>
+                                    </td>
+                                    <td>
+                                        <p class="inline negative">-19.2%</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-left">
+                                        <p class="inline">Shopping</p>
+                                    </td>
+                                    <td>
+                                        <p class="inline positive">+4.2%</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="goals card">
+                        <h3>Financial Goals</h3>
+                        <div class="section-line"></div>
+                        <p>Your on track to <span>paying off your mortgage</span> in 2 months!</p>
+                    </div>
+                </div>
+                <div>
+                    <div id="monthly-expenditure-chart" style="width: 960px;height:300px;"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-line"></div>
+        <p><strong>Credit of Rafael Padilla, Raphael Cacho, Peyton Barre, and Sachin Kathiresan</strong></p>
+    </footer>
+    <script src="./js/dash.js"></script>
+</body>
+
+</html>
